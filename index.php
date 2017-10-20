@@ -58,8 +58,32 @@ include_once 'connectiontesting.php';
 <section>
 
     <?php
-    $sql = "INSERT INTO Tbl_councils (id, council)
-    VALUES (1, 'Aberdeen')";
+
+    // Create database
+    $sql = "CREATE DATABASE councilDB";
+    if ($conn->query($sql) === TRUE) {
+        echo "Database created successfully";
+    } else {
+        echo "Error creating database: " . $conn->error;
+    }
+
+
+    // sql to create table
+    $sql = "CREATE TABLE Tbl_councils (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+Council VARCHAR(30) NOT NULL,
+reg_date TIMESTAMP
+)";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Table MyGuests created successfully";
+    } else {
+        echo "Error creating table: " . $conn->error;
+    }
+
+
+    $sql = "INSERT INTO Tbl_councils ( council)
+    VALUES ('Aberdeen')";
 
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
