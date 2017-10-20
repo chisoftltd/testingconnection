@@ -45,6 +45,7 @@ include_once 'connectiontesting.php';
                     <!-- check if same user is still same as the active session user and load appropriate menu options -->
 
                         <li class="active"><a href="create.php">Create</a></li>
+                    <li><a href="show.php">Show</a></li>
                         <li><a href="editing.php">Editing</a></li>
                         <li><a href="search.php">Search</a></li>
                         <li><a href="newrecord.php">New Record</a></li>
@@ -55,6 +56,20 @@ include_once 'connectiontesting.php';
 </header>
 <hr> <!-- draw a line-->
 <section>
+
+    <?php
+    $sql = "select * from Tbl_councils";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo "id: " . $row["id"]. " - Council: " . $row["council"]."<br>";
+        }
+    } else {
+        echo "0 results";
+    }
+    ?>
 </section><!-- end of section-->
 <hr> <!-- draw a line-->
 <footer>
