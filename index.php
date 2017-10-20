@@ -61,6 +61,18 @@ include_once 'connectiontesting.php';
     <br>
     <?php
 
+    $sql = "Show tables";
+    $result = $conn->query($sql);
+    echo $result;
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while ($row = $result->fetch_assoc()) {
+            echo $row[0]  . "<br>";
+        }
+    } else {
+        echo "Nil results";
+    }
+
     $sql = "select * from Tbl_councils";
     $result = $conn->query($sql);
     echo $result;
