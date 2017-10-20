@@ -13,7 +13,7 @@ $password = "ccms_test2!%%^";
 $dbname = "councilDB";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $councilDB);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
