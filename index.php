@@ -72,20 +72,14 @@ include_once 'connectiontesting.php';
     }
 
 
-    $sqldb = "SHOW DATABASES";
+    
 
-    $resultdb = $conn->query($sqldb);
+    $res = mysql_query("SHOW DATABASES");
 
-    if ($resultdb->num_rows > 0) {
-        echo "testing 3";
-        // output data of each row
-        while ($row = $resultdb->fetch_assoc()) {
-            echo "testing 4";
-            echo "Database: " . $row['Database'] ."<br>";
-        }
-    } else {
-        echo "0 database results";
+    while ($row = mysql_fetch_assoc($res)) {
+        echo $row['Database'] . "\n";
     }
+
     // Create database
 /*
     $sql = "CREATE DATABASE councilDB";
