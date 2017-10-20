@@ -44,10 +44,10 @@ include_once 'connectiontesting.php';
                 <ul class="nav navbar-nav navbar-right">
                     <!-- check if same user is still same as the active session user and load appropriate menu options -->
 
-                        <li class="active"><a href="index.php">Create</a></li>
-                        <li><a href="menu/about.php">Editing</a></li>
-                        <li><a href="menu/courses.php">Search</a></li>
-                        <li><a href="menu/assessment.php">New Record</a></li>
+                        <li class="active"><a href="create.php">Create</a></li>
+                        <li><a href="editing.php">Editing</a></li>
+                        <li><a href="search.php">Search</a></li>
+                        <li><a href="newrecord.php">New Record</a></li>
                 </ul>
             </div>
         </div>
