@@ -70,11 +70,14 @@ include_once 'connectiontesting.php';
     } else {
         echo "0 user results";
     }
-
+    echo "testing";
 
     $sqldb = "SHOW DATABASES";
+    echo "testing 1";
     $resultdb = $conn->query($sqldb);
+    echo "testing 2";
     if ($result->num_rows > 0) {
+        echo "testing 3";
         // output data of each row
         while ($row = $result->fetch_assoc()) {
             echo "Database: " . $row["database"] ."<br>";
