@@ -10,6 +10,6 @@
 <HTML>
 <body>
 <h1>hello</h1>
-<a href="connectiontesting.php">connect</a>
+<a href="connectiontesting.php">connect to server</a>
 </body>
 </HTML>
