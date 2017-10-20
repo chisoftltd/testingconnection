@@ -67,7 +67,7 @@ echo $result;
             echo "id: " . $row["id"]. " - Council: " . $row["council"]."<br>";
         }
     } else {
-        echo "0 results";
+        echo "Nil results";
     }
     ?>
 </section><!-- end of section-->
