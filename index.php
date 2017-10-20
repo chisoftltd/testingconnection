@@ -60,8 +60,18 @@ include_once 'connectiontesting.php';
 <br>
     <br>
     <?php
+    $sql = "SELECT USER(), CURRENT_USER()";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while ($row = $result->fetch_assoc()) {
+            echo "USER(): " . $row["USER()"] . " - CURRENT_USER(): " . $row["CURRENT_USER()"] . "<br>";
+        }
+    } else {
+        echo "0 results";
+    }
     // Create database
-
+/*
     $sql = "CREATE DATABASE councilDB";
     if ($conn->query($sql) === TRUE) {
         echo "Database created successfully";
@@ -103,7 +113,8 @@ reg_date TIMESTAMP
     } else {
         echo "Nil results";
     }
-    ?>
+  */
+?>
 </section><!-- end of section-->
 <hr> <!-- draw a line-->
 <footer>
