@@ -77,10 +77,10 @@ include_once 'connectiontesting.php';
     $result = $conn->query($sqldb);
 
     if ($result->num_rows > 0) {
-        echo "testing 3";
+        
         // output data of each row
         while ($row = $result->fetch_assoc()) {
-            echo "testing 4";
+
             echo "Database: " . $row['Database'] ."<br>";
         }
     } else {
