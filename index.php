@@ -88,28 +88,6 @@ include_once 'connectiontesting.php';
     }
 
 
-// sql to create table
-    $sql = "CREATE TABLE Tbl_councils (
-id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-Council VARCHAR(30) NOT NULL,
-reg_date TIMESTAMP
-)";
-
-    if ($conn->query($sql) === TRUE) {
-        echo "Table MyGuests created successfully";
-    } else {
-        echo "Error creating table: " . $conn->error;
-    }
-
-
-    $sql = "INSERT INTO Tbl_councils ( council)
-    VALUES ('Aberdeen')";
-
-    if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
 
 
     $sql = "select * from Tbl_councils";
@@ -123,7 +101,7 @@ reg_date TIMESTAMP
     } else {
         echo "Nil results";
     }
-  
+
 ?>
 </section><!-- end of section-->
 <hr> <!-- draw a line-->
