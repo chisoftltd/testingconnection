@@ -68,7 +68,7 @@ include_once 'connectiontesting.php';
             echo "USER(): " . $row["USER()"] . " - CURRENT_USER(): " . $row["CURRENT_USER()"] . "<br>";
         }
     } else {
-        echo "0 results";
+        echo "0 user results";
     }
 
 
@@ -80,7 +80,7 @@ include_once 'connectiontesting.php';
             echo "Database: " . $row["databse"] ."<br>";
         }
     } else {
-        echo "0 results";
+        echo "0 database results";
     }
     // Create database
 /*
