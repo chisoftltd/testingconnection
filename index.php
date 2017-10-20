@@ -54,14 +54,14 @@ include_once 'connectiontesting.php';
         </div>
     </nav>
 </header>
+
 <hr> <!-- draw a line-->
 <section>
-
+<br>
+    <br>
     <?php
-echo " ";
-echo " ";
-echo " ";
     // Create database
+    include_once 'connectiontesting.php';
     $sql = "CREATE DATABASE councilDB";
     if ($conn->query($sql) === TRUE) {
         echo "Database created successfully";
@@ -69,7 +69,9 @@ echo " ";
         echo "Error creating database: " . $conn->error;
     }
 
-
+?>
+    <?php
+    include_once 'databaseconn.php';
     // sql to create table
     $sql = "CREATE TABLE Tbl_councils (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
