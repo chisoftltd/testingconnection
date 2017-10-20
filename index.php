@@ -80,7 +80,7 @@ include_once 'connectiontesting.php';
         echo "testing 3";
         // output data of each row
         while ($row = $result->fetch_assoc()) {
-            echo "Database: " . $row["Database"] ."<br>";
+            echo "Database: " . $row['Database'] ."<br>";
         }
     } else {
         echo "0 database results";
