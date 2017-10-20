@@ -66,7 +66,7 @@ include_once 'connectiontesting.php';
     echo "testing 1";
     if ($result->num_rows > 0) {
         // output data of each row
-        echo "testing 2" ."/n";
+
         while ($row = $result->fetch_assoc()) {
             echo $row[0]  . "<br>";
         }
