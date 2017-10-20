@@ -58,7 +58,9 @@ include_once 'connectiontesting.php';
 <section>
 
     <?php
-
+echo "";
+echo "";
+echo "";
     // Create database
     $sql = "CREATE DATABASE councilDB";
     if ($conn->query($sql) === TRUE) {
