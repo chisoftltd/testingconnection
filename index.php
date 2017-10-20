@@ -60,35 +60,6 @@ include_once 'connectiontesting.php';
 <br>
     <br>
     <?php
-    $sql = "SELECT USER(), CURRENT_USER()";
-    $result = $conn->query($sql);
-    if ($result->num_rows > 0) {
-        // output data of each row
-        while ($row = $result->fetch_assoc()) {
-            echo "USER(): " . $row["USER()"] . "<br>". " - CURRENT_USER(): " . $row["CURRENT_USER()"] . "<br>";
-        }
-    } else {
-        echo "0 user results";
-    }
-
-
-    $sqldb = "SHOW DATABASES";
-
-    $result = $conn->query($sqldb);
-
-    if ($result->num_rows > 0) {
-
-        // output data of each row
-        while ($row = $result->fetch_assoc()) {
-
-            echo "Database: " . $row['Database'] ."<br>";
-        }
-    } else {
-        echo "0 database results";
-    }
-
-
-
 
     $sql = "select * from Tbl_councils";
     $result = $conn->query($sql);
