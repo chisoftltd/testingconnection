@@ -65,7 +65,7 @@ include_once 'connectiontesting.php';
     if ($result->num_rows > 0) {
         // output data of each row
         while ($row = $result->fetch_assoc()) {
-            echo "USER(): " . $row["USER()"] . " - CURRENT_USER(): " . $row["CURRENT_USER()"] . "<br>";
+            echo "USER(): " . $row["USER()"] . "<br>". " - CURRENT_USER(): " . $row["CURRENT_USER()"] . "<br>";
         }
     } else {
         echo "0 user results";
