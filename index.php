@@ -44,11 +44,11 @@ include_once 'connectiontesting.php';
                 <ul class="nav navbar-nav navbar-right">
                     <!-- check if same user is still same as the active session user and load appropriate menu options -->
 
-                        <li class="active"><a href="create.php">Create</a></li>
+                    <li class="active"><a href="create.php">Create</a></li>
                     <li><a href="show.php">Show</a></li>
-                        <li><a href="editing.php">Editing</a></li>
-                        <li><a href="search.php">Search</a></li>
-                        <li><a href="newrecord.php">New Record</a></li>
+                    <li><a href="editing.php">Editing</a></li>
+                    <li><a href="search.php">Search</a></li>
+                    <li><a href="newrecord.php">New Record</a></li>
                 </ul>
             </div>
         </div>
@@ -58,13 +58,23 @@ include_once 'connectiontesting.php';
 <section>
 
     <?php
+    $sql = "INSERT INTO Tbl_councils (id, council)
+VALUES (1, 'Aberdeen')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+
     $sql = "select * from Tbl_councils";
     $result = $conn->query($sql);
-echo $result;
+    echo $result;
     if ($result->num_rows > 0) {
         // output data of each row
-        while($row = $result->fetch_assoc()) {
-            echo "id: " . $row["id"]. " - Council: " . $row["council"]."<br>";
+        while ($row = $result->fetch_assoc()) {
+            echo "id: " . $row["id"] . " - Council: " . $row["council"] . "<br>";
         }
     } else {
         echo "Nil results";
