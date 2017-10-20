@@ -77,7 +77,7 @@ include_once 'connectiontesting.php';
     if ($result->num_rows > 0) {
         // output data of each row
         while ($row = $result->fetch_assoc()) {
-            echo "Database: " . $row["databse"] ."<br>";
+            echo "Database: " . $row["database"] ."<br>";
         }
     } else {
         echo "0 database results";
