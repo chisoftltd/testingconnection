@@ -72,7 +72,7 @@ include_once 'connectiontesting.php';
     }
 
 
-    
+
 
     $res = mysql_query("SHOW DATABASES");
 
