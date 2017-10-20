@@ -77,7 +77,7 @@ include_once 'connectiontesting.php';
     $result = $conn->query($sqldb);
 
     if ($result->num_rows > 0) {
-        
+
         // output data of each row
         while ($row = $result->fetch_assoc()) {
 
@@ -86,14 +86,8 @@ include_once 'connectiontesting.php';
     } else {
         echo "0 database results";
     }
-    // Create database
-/*
-    $sql = "CREATE DATABASE councilDB";
-    if ($conn->query($sql) === TRUE) {
-        echo "Database created successfully";
-    } else {
-        echo "Error creating database: " . $conn->error;
-    }
+
+
 // sql to create table
     $sql = "CREATE TABLE Tbl_councils (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
@@ -129,7 +123,7 @@ reg_date TIMESTAMP
     } else {
         echo "Nil results";
     }
-  */
+  
 ?>
 </section><!-- end of section-->
 <hr> <!-- draw a line-->
