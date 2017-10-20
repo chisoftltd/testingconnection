@@ -59,7 +59,7 @@ include_once 'connectiontesting.php';
 
     <?php
     $sql = "INSERT INTO Tbl_councils (id, council)
-VALUES (1, 'Aberdeen')";
+    VALUES (1, 'Aberdeen')";
 
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
